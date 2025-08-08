@@ -1,0 +1,11 @@
+-- Creating the userRecords table:
+CREATE TABLE IF NOT EXISTS userRecords (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    image VARCHAR(255) DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+-- Seeing the result after inserting data:
+SELECT * FROM userRecords ORDER BY id DESC;
